@@ -52,7 +52,7 @@ rails s
 A aplicação estará disponível no navegador em `http://localhost:3000`.
 
 ## Como Usar a Aplicação
-![Cadastro de Produto](cadastro.mp4)
+![Cadastro de Produto](cadastro.gif)
 - Acesse a página principal (`http://localhost:3000`). Você será redirecionado automaticamente para a listagem de produtos.
 - Clique em "Novo Produto" para acessar o formulário de cadastro de um novo produto.
 - Preencha os campos do formulário e clique em "Criar Produto" para cadastrar um novo produto.
