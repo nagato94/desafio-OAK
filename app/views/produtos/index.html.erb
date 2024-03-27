@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <div class="card shadow-lg">
+    <div class="card-header bg-primary text-white text-center">
+      Listagem de Produtos
+    </div>
+    <div class="card-body">
+      <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th>Nome</th>
+            <th>Valor</th>
+            <th>Disponível para venda</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @produtos.each do |produto| %>
+            <tr>
+              <td><%= produto.nome %></td>
+              <td><%= number_to_currency(produto.valor) %></td>
+              <td><%= produto.disponivel_para_venda ? 'Sim' : 'Não' %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= link_to 'Novo Produto', new_produto_path, class: "btn btn-success" %>
+    </div>
+  </div>
+</div>

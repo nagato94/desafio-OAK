@@ -1,0 +1,26 @@
+<div class="container mt-5 d-flex justify-content-center">
+  <div class="card w-50 border-primary shadow-lg">
+    <div class="card-header bg-primary text-white text-center">
+      Cadastro de Produto
+    </div>
+    <div class="card-body">
+      <%= simple_form_for @produto, data: { turbo: false } do |f| %>
+        <div class="form-group mb-3">
+          <%= f.input :nome, input_html: { class: 'form-control' }, wrapper: false, label_html: { class: 'form-label' } %>
+        </div>
+        <div class="form-group mb-3">
+          <%= f.input :descricao, as: :text, input_html: { class: 'form-control' }, wrapper: false, label_html: { class: 'form-label' } %>
+        </div>
+        <div class="form-group mb-3">
+          <%= f.input :valor, input_html: { class: 'form-control', step: '0.01' }, wrapper: false, label_html: { class: 'form-label' } %>
+        </div>
+        <div class="form-group mb-3">
+          <%= f.input :disponivel_para_venda, as: :boolean, boolean_style: :inline, label: 'Disponível para venda?', input_html: { class: 'form-check-input' }, label_html: { class: 'form-check-label' } %>
+        </div>
+        <div class="actions">
+          <%= f.button :submit, "Criar Produto", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
